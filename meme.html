@@ -8,8 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>YOUR RESULT<br> 94.67%</p>
+    <p id="targetElementId">YOUR RESULT<br></p>
     <div class="centre"> <a href="download.html" target="_blank">Download Marksheet</a> </div>
 
 </body>
+<script>
+    // Function to generate a random number between min and max (inclusive)
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Select the DOM element where the number will be appended
+const targetElement = document.getElementById('targetElementId');
+
+// Generate a random number between 90 and 95
+const randomNumber = getRandomNumber(90, 95)+'%';
+
+// Create a new text node with the random number
+const numberTextNode = document.createTextNode(randomNumber);
+
+// Append the text node to the target element
+targetElement.appendChild(numberTextNode);
+
+</script>
 </html>
