@@ -14,15 +14,15 @@
 </body>
 <script>
     // Function to generate a random number between min and max (inclusive)
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    function getRandomNumber(min, max) {
+  return (Math.random() * (max - min) + min).toFixed(2);
 }
 
 // Select the DOM element where the number will be appended
 const targetElement = document.getElementById('targetElementId');
 
 // Generate a random number between 90 and 95
-const randomNumber = getRandomNumber(90, 95)+'.87%';
+const randomNumber = getRandomNumber(90, 95)+'%';
 
 // Create a new text node with the random number
 const numberTextNode = document.createTextNode(randomNumber);
